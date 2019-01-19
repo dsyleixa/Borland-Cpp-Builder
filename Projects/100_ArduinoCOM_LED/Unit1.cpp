@@ -63,6 +63,8 @@ void __fastcall TForm1::Button4Click(TObject *Sender)
 
 void __fastcall TForm1::Button5Click(TObject *Sender)
 {
+   Button4->Click();
+   ComPort1->Close();
    Application->Terminate();        
 }
 //---------------------------------------------------------------------------
