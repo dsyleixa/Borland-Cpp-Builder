@@ -1,3 +1,20 @@
+//  Arduino remote control by Windows form with widgets
+// (C) 2018 by dsyleixa
+
+// This example code is in the public domain for private use.
+// Use for professional or business purpose only by personal written permission 
+// by the author.
+
+// history:
+// 0.0.3  clean-up quit
+// 0.0.2  quit button
+// 0.0.1  LED buttons only when COM connected
+// 0.0.0  basic remote LED on/off 9600 baud
+
+// MenuClass.h
+
+// ver 0.0.3
+
 //---------------------------------------------------------------------------
 
 #include <vcl.h>
