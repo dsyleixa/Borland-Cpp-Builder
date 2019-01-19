@@ -4,15 +4,15 @@
   <MACROS>
     <VERSION value="BCB.05.03"/>
     <PROJECT value="Project_hello_1.exe"/>
-    <OBJFILES value="Project_hello_1.obj ..\Project_hello\hello_world_1.obj"/>
+    <OBJFILES value="Project_hello_1.obj hello_world_1.obj"/>
     <RESFILES value="Project_hello_1.res"/>
     <DEFFILE value=""/>
-    <RESDEPEN value="$(RESFILES) ..\Project_hello\hello_world_1.dfm"/>
+    <RESDEPEN value="$(RESFILES) hello_world_1.dfm"/>
     <LIBFILES value=""/>
     <LIBRARIES value=""/>
     <SPARELIBS value="Vcl50.lib"/>
     <PACKAGES value="Vcl50.bpi Vclx50.bpi bcbsmp50.bpi dclocx50.bpi bcb2kaxserver50.bpi"/>
-    <PATHCPP value=".;..\Project_hello"/>
+    <PATHCPP value=".;"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
     <PATHASM value=".;"/>
