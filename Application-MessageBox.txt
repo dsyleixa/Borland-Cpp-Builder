@@ -1,0 +1,30 @@
+      
+       
+ Application->MessageBox
+
+  0  MB_OK                [ OK ]
+  1  MB_OKCANCEL          [ OK ] [ Cancel ]
+  2  MB_ABORTRETRYIGNORE  [ OK ] [ Cancel ] [ Ignore ]
+  3  MB_YESNOCANCEL       [ OK ] [ Yes ] [ No ]
+  4  MB_YESNO             [ Yes ] [ No ]
+  5  MB_RETRAYCANCEL      [ Retry] [ Cancel]  
+ 
+ 16  MBICONSTOP           (X)
+ 32  MBICONQUESTION       (?)
+ 48  MB_ICONEXCLAMATION   /!\  
+ 64  MB_ICONINFORMATION   (i)
+
+
+  0  MB_DEFBUTTON1        (1st button=default_enter)
+256  MB_DEFBUTTON2        (2nd button=default_enter)
+512  MB_DEFBUTTON3        (3rd button=default_enter)
+
+
+return values:
+  1  IDOK   
+  2  ICCANCEL
+  3  IDABORT
+  4  IDRETRY
+  5  IDIGNORE
+  6  IDYES
+  7  IDNO
