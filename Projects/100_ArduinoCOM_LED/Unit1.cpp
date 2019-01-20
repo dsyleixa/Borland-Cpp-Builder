@@ -58,10 +58,13 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
 void __fastcall TForm1::Button3Click(TObject *Sender)
 {
    if(ComPort1->Connected )  {
-      ComPort1->WriteStr("1");
+      ComPort1->WriteStr("&LEDBI=1;");
       Shape1->Brush->Color=clRed;
       Button3-> Enabled=false;
       Button4-> Enabled=true;
+   }
+   if(ComPort1->Connected )  {
+      ComPort1->WriteStr("\n");
    }
 }
 //---------------------------------------------------------------------------
@@ -69,10 +72,13 @@ void __fastcall TForm1::Button3Click(TObject *Sender)
 void __fastcall TForm1::Button4Click(TObject *Sender)
 {
    if(ComPort1->Connected )  {
-      ComPort1->WriteStr("0");
+      ComPort1->WriteStr("&LEDBI=0;");
       Shape1->Brush->Color=clBlack;
       Button3-> Enabled=true;
       Button4-> Enabled=false;
+   }
+   if(ComPort1->Connected )  {
+      ComPort1->WriteStr("\n");
    }
 }
 
