@@ -72,7 +72,7 @@ void __fastcall TForm1::Button4Click(TObject *Sender)
 {
    if(ComPort1->Connected )  {
       ComPort1->WriteStr("&LEDBI=255;\n");
-      Shape1->Brush->Color=clYellow;
+      Shape1->Brush->Color= TColor( 0x00FF00 ); //
       ScrollBar1->Min=0;
       ScrollBar1->Max=255;
       ScrollBar1->Position=255;
@@ -103,23 +103,13 @@ void __fastcall TForm1::ScrollBar1Change(TObject *Sender)
    strcat(cmsg,";\n");
    if(ComPort1->Connected )  {
       ComPort1->WriteStr(cmsg);
-      if(pwm>230)  Shape1->Brush->Color=clLime;
-      else
-      if(pwm>180)  Shape1->Brush->Color=clGreen;
-      else
-      if(pwm>140)  Shape1->Brush->Color=clTeal;
-      else
-      if(pwm>100)  Shape1->Brush->Color=clGray;
-      else
-      if(pwm>60)  Shape1->Brush->Color=clGrayText;
-      else
-      if(pwm>30)  Shape1->Brush->Color=clWindowFrame;
-      else
-      if(pwm<=30)  Shape1->Brush->Color=clBlack;
+      Shape1->Brush->Color= TColor( 0x000000+(256ul*pwm +0) );  //
+
       Label1->Caption=String(pwm);
    }
 
 }
+
 //---------------------------------------------------------------------------
 
 
