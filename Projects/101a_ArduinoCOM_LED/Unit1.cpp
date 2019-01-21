@@ -103,7 +103,7 @@ void __fastcall TForm1::ScrollBar1Change(TObject *Sender)
    strcat(cmsg,";\n");
    if(ComPort1->Connected )  {
       ComPort1->WriteStr(cmsg);
-      Shape1->Brush->Color= TColor(65536*(1+pwm/2)+(256ul*pwm + (1+pwm/2)) );
+      Shape1->Brush->Color= TColor(65536*(1+pwm/2)+(256ul*pwm) + (1+pwm/2) );
 
       Label1->Caption=String(pwm);
    }
