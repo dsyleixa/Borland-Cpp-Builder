@@ -21,6 +21,13 @@
 #include <Wire.h>         // Incl I2C comm, but needed for not getting compile error
 
 
+// notice:
+// on Mega2560 the anaolgWrite() pwm function works on all pins 2...13 (thus also for LED_BUILTIN) plus some evtra ones.
+// on ATmega168 or ATmega328P the anaolgWrite() pwm function works on pins 3, 5, 6, 9, 10, and 11 
+// thus (not for LED_BUILTIN).
+// on Mega2560 the anaolgWrite() pwm function works on all pins 2...13 
+// (thus also for LED_BUILTIN) plus some evtra ones.
+
 //----------------------------------------------------------------------------
 // tools
 //----------------------------------------------------------------------------
