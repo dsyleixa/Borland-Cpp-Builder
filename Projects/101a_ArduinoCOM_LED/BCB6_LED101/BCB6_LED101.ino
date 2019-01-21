@@ -5,7 +5,6 @@
 // Use for professional or business purpose: only 
 // by personal written permission by the author.
 
-
 // history:
 // 0.0.2  receiving strings, pattern: &varname1=value1;
 // 0.0.1  receiving simple Serial char 
@@ -15,15 +14,18 @@
 
 
 // i2c
-#include <Wire.h>         // Incl I2C comm, but needed for not getting compile error
+#include <Wire.h>   // Incl I2C comm, but needed for not getting compile error
+
 
 
 // notice:
-// on Mega2560 the anaolgWrite() pwm function works on all pins 2...13 (thus also for LED_BUILTIN) plus some evtra ones.
+// on Mega2560 the analogWrite() pwm function works on all pins 2...13 (thus also for LED_BUILTIN) plus some extra ones.
 // on ATmega168 or ATmega328P the anaolgWrite() pwm function works on pins 3, 5, 6, 9, 10, and 11 
-// thus (not for LED_BUILTIN).
+// (thus not for LED_BUILTIN).
 // on Mega2560 the anaolgWrite() pwm function works on all pins 2...13 
 // (thus also for LED_BUILTIN) plus some evtra ones.
+
+
 
 //----------------------------------------------------------------------------
 // tools
