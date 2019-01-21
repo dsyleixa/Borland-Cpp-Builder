@@ -5,9 +5,6 @@
 // Use for professional or business purpose: only 
 // by personal written permission by the author.
 
-// default TFT: OLED 128x64, compatible to Adafruit (R) Libs
-// in this example: using an ESP8266 NodeMCU 1.0 board
-// using ButtonClass for button action (up, down, enter, single/double/long press) 
 
 // history:
 // 0.0.2  receiving strings, pattern: &varname1=value1;
