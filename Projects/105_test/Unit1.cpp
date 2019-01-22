@@ -57,6 +57,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
       Button5->Enabled=true;
       ScrollBar1->Position=0;
       Label1->Caption=String(ScrollBar1->Position);
+      Button3->Click(); 
    }
 
 }

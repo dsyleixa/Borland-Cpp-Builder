@@ -25,6 +25,8 @@ __published:	// IDE-managed Components
         TShape *Shape1;
         TLabel *Label2;
         TComLed *ComLed1;
+        TGroupBox *GroupBox1;
+        TGroupBox *GroupBox2;
         void __fastcall ComPort1RxChar(TObject *Sender, int Count);
         void __fastcall Button5Click(TObject *Sender);
         void __fastcall Button1Click(TObject *Sender);

@@ -1,8 +1,8 @@
 object Form1: TForm1
   Left = 370
   Top = 227
-  Width = 1305
-  Height = 675
+  Width = 1166
+  Height = 382
   Caption = 'Form1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,19 +13,9 @@ object Form1: TForm1
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 992
-    Top = 80
-    Width = 33
-    Height = 25
-    AutoSize = False
-    Caption = 'Label1'
-    Color = clWhite
-    ParentColor = False
-  end
   object Shape1: TShape
-    Left = 1080
-    Top = 80
+    Left = 960
+    Top = 88
     Width = 25
     Height = 25
     Shape = stCircle
@@ -41,17 +31,43 @@ object Form1: TForm1
     ParentColor = False
   end
   object ComLed1: TComLed
-    Left = 384
-    Top = 80
+    Left = 416
+    Top = 88
     Width = 25
     Height = 25
     ComPort = ComPort1
     LedSignal = lsConn
     Kind = lkRedLight
   end
-  object Button1: TButton
+  object Label1: TLabel
+    Left = 904
+    Top = 88
+    Width = 33
+    Height = 25
+    AutoSize = False
+    Caption = 'Label1'
+    Color = clWhite
+    ParentColor = False
+  end
+  object GroupBox2: TGroupBox
+    Left = 496
+    Top = 72
+    Width = 393
+    Height = 49
+    Caption = 'LED_BUILTIN'
+    TabOrder = 7
+  end
+  object GroupBox1: TGroupBox
     Left = 48
-    Top = 80
+    Top = 72
+    Width = 337
+    Height = 49
+    Caption = 'COM-Port'
+    TabOrder = 6
+  end
+  object Button1: TButton
+    Left = 64
+    Top = 88
     Width = 75
     Height = 25
     Caption = 'connect'
@@ -59,8 +75,8 @@ object Form1: TForm1
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 152
-    Top = 80
+    Left = 168
+    Top = 88
     Width = 75
     Height = 25
     Caption = 'disconnect'
@@ -68,8 +84,8 @@ object Form1: TForm1
     OnClick = Button2Click
   end
   object Button3: TButton
-    Left = 576
-    Top = 80
+    Left = 504
+    Top = 88
     Width = 75
     Height = 25
     Caption = 'Off'
@@ -77,17 +93,17 @@ object Form1: TForm1
     OnClick = Button3Click
   end
   object Button4: TButton
-    Left = 672
-    Top = 80
-    Width = 91
+    Left = 592
+    Top = 88
+    Width = 73
     Height = 25
     Caption = 'On'
     TabOrder = 3
     OnClick = Button4Click
   end
   object Button5: TButton
-    Left = 264
-    Top = 80
+    Left = 280
+    Top = 88
     Width = 75
     Height = 25
     Caption = 'Quit'
@@ -95,9 +111,9 @@ object Form1: TForm1
     OnClick = Button5Click
   end
   object ScrollBar1: TScrollBar
-    Left = 808
-    Top = 80
-    Width = 121
+    Left = 688
+    Top = 88
+    Width = 169
     Height = 25
     PageSize = 0
     TabOrder = 5
@@ -119,7 +135,7 @@ object Form1: TForm1
     StoredProps = [spBasic]
     TriggersOnRxChar = True
     OnRxChar = ComPort1RxChar
-    Left = 384
-    Top = 40
+    Left = 448
+    Top = 80
   end
 end
