@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 300
-  Top = 169
+  Left = 283
+  Top = 190
   Width = 1008
   Height = 434
   Caption = 'Form1'
@@ -20,7 +20,7 @@ object Form1: TForm1
     Height = 25
     ComPort = ComPort1
     LedSignal = lsConn
-    Kind = lkRedLight
+    Kind = lkGreenLight
   end
   object GroupBox1: TGroupBox
     Left = 16
@@ -57,7 +57,7 @@ object Form1: TForm1
     Caption = 'LED_BUILTIN'
     TabOrder = 1
     object Shape1: TShape
-      Left = 504
+      Left = 496
       Top = 24
       Width = 25
       Height = 25
@@ -153,6 +153,6 @@ object Form1: TForm1
     StoredProps = [spBasic]
     TriggersOnRxChar = False
     Left = 352
-    Top = 8
+    Top = 16
   end
 end
