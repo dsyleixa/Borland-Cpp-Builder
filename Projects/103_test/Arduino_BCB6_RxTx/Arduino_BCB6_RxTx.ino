@@ -109,7 +109,10 @@ int16_t ival;
 
 void loop() {
   static bool stringComplete = false;
- 
+
+  //-------------------------------------------------------------
+  // receive
+  
   while (Serial.available() ) {
     char inChar = (char)Serial.read();
  
@@ -140,18 +143,20 @@ void loop() {
     inputString="";
     stringComplete = false;
 
-    int a0, a1, a2, a3;
-    a0=analogRead(A0);
-    a1=analogRead(A1);
-    a2=analogRead(A2);
-    a3=analogRead(A3);
-
-    sprintf(cbuf, "&a0=%d;&a1=%d;&a2=%d;&a3=%d;", a0,a1,a2,a3);
-    Serial.println(cbuf);
-    strcpy(cbuf, "");
     
   }
+  //-------------------------------------------------------------
+  // send
+  int a0, a1, a2, a3;
+  a0=analogRead(A0);
+  a1=analogRead(A1);
+  a2=analogRead(A2);
+  a3=analogRead(A3);
 
+  sprintf(cbuf, "&a0=%d;&a1=%d;&a2=%d;&a3=%d;", a0,a1,a2,a3);
+  Serial.println(cbuf);
+  strcpy(cbuf, "");
+    
 }
 
 // end of file
