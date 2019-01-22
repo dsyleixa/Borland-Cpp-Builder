@@ -27,10 +27,16 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 void __fastcall TForm1::ComPort1RxChar(TObject *Sender, int Count)
 {
   Form1->Caption="character detected";
-  Label2->Caption=String("Test");
+  AnsiString rcvStr;
+  ComPort1->ReadStr(rcvStr, 250);
+   // Liest die im Eingangspuffer vorhandenen "Count" -Bytes und kopiert sie
 
+  Label2->Caption=String(rcvStr);
 }
+
 //---------------------------------------------------------------------------
+
+
 void __fastcall TForm1::Button5Click(TObject *Sender)
 {
    Button3->Click();
