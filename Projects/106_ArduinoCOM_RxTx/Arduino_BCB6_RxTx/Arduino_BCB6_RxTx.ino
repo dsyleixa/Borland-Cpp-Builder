@@ -88,6 +88,15 @@ char * cstringarg( char* haystack, char* vname, char* sarg ) {
 }
 
 
+void writeDPin(int pin, int ival) {
+  pinMode(pin, OUTPUT);  // safety
+  if(ival==0)  { digitalWrite(pin, LOW); }
+  else
+  if(ival==255) { digitalWrite(pin, HIGH); }
+  else {       
+     analogWrite(pin, ival); 
+  }   
+}
 //----------------------------------------------------------------------------
 // setup
 //----------------------------------------------------------------------------
@@ -128,19 +137,106 @@ void loop() {
     inputString.toCharArray(cbuf, MSGLEN-1);
     
     // cstringarg( char* haystack, char* vname, char* sarg )
-    // haystack pattern: &varname=1234abc,  delimiters &, \n, \0, SPACE, EOF 
+    // haystack pattern: &varname=1234abc;  delimiters &, \n, \0, SPACE, EOF 
     
     cstringarg(cbuf, "LEDBI", cval); // LEDBI: LED_BUILTIN    
-    if(cval!="") {    
+    if(cval!="") {          
+      ival=atoi(cval); 
       pinMode(LED_BUILTIN, OUTPUT);  // safety
-      ival=atoi(cval);
       if(ival==0)  { digitalWrite(LED_BUILTIN, LOW); }
       else
       if(ival==255) { digitalWrite(LED_BUILTIN, HIGH); }
       else {       
-         analogWrite(LED_BUILTIN, ival); 
-      }   
-    }    
+        analogWrite(LED_BUILTIN, ival); 
+      }         
+    }  
+    
+    cstringarg(cbuf, "DPIN0", cval); //   
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(0, ival);      
+    }  
+    cstringarg(cbuf, "DPIN1", cval); //  
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(1, ival);      
+    }  
+    cstringarg(cbuf, "DPIN2", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(2, ival);      
+    }  
+    cstringarg(cbuf, "DPIN3", cval); //  
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(3, ival);      
+    }  
+    cstringarg(cbuf, "DPIN4", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(4, ival);      
+    }  
+    cstringarg(cbuf, "DPIN5", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(5, ival);      
+    }  
+    cstringarg(cbuf, "DPIN6", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(6, ival);      
+    }  
+    cstringarg(cbuf, "DPIN7", cval); //    
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(7, ival);      
+    }  
+    cstringarg(cbuf, "DPIN8", cval); //    
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(8, ival);      
+    }  
+    cstringarg(cbuf, "DPIN9", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(9, ival);      
+    }  
+    cstringarg(cbuf, "DPIN10", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(10, ival);      
+    }  
+    cstringarg(cbuf, "DPIN11", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(11, ival);      
+    }  
+    cstringarg(cbuf, "DPIN12", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(12, ival);      
+    }  
+    cstringarg(cbuf, "DPIN13", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(13, ival);      
+    }  
+    cstringarg(cbuf, "DPIN14", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(14, ival);      
+    }  
+    cstringarg(cbuf, "DPIN15", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(15, ival);      
+    }  
+    cstringarg(cbuf, "DPIN16", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(16, ival);      
+    }  
+    cstringarg(cbuf, "DPIN17", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(17, ival);      
+    }  
+    cstringarg(cbuf, "DPIN18", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(18, ival);      
+    }        
+    cstringarg(cbuf, "DPIN19", cval); //      
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(19, ival);      
+    } 
+    cstringarg(cbuf, "DPIN20", cval); // LEDBI: LED_BUILTIN    
+    if(cval!="") {          
+      ival=atoi(cval); writeDPin(20, ival);      
+    }   
+
+    
     inputString="";
     stringComplete = false;
 
@@ -148,16 +244,34 @@ void loop() {
   }
   //-------------------------------------------------------------
   // send
-  int a0, a1, a2, a3;
-  a0=analogRead(A0);
-  a1=analogRead(A1);
-  a2=analogRead(A2);
-  a3=analogRead(A3);
+  int i0, i1, i2, i3, i4, i5, i6, i7, i8;
+  double d0, d1, d2, d3, d4, d5;
+  
+  i0=analogRead(A0);
+  i1=analogRead(A1);
+  i2=analogRead(A2);
+  i3=analogRead(A3);
+  i4=444;
+  i5=5555;
+  i6=-66666;
+  i7=777777;
+  i8=8888888;
 
-  sprintf(cbuf, "&a0=%d;&a1=%d;&a2=%d;&a3=%d;", a0,a1,a2,a3);
+  d0=0;
+  d1=10.1; 
+  d2=-20.22;
+  d3=300.333;
+  d4=-4000.4444;
+  d5=50000.55555;
+
+  sprintf(cbuf, "&INT0=%d;&INT1=%d;&INT2=%d;&INT3=%d;&INT4=%d;&INT5=%d;&INT6=%d;&INT7=%d;&INT8=%d;&DBL0=%f;&DBL1=%f;&DBL2=%f;&DBL3=%f;&DBL4=%f;&DBL5=%f;", 
+                 i0,i1,i2,i3,i4,i5,i6,i7,i8,d0,d1,d2,d3,d4,d5);
+                 
   Serial.println(cbuf);
-  strcpy(cbuf, "");
-    
+  strcpy(cbuf, "");  
+
+  //delay
+  delay(20); 
 }
 
 // end of file
