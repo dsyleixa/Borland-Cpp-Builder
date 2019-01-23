@@ -138,7 +138,7 @@ void loop() {
     // haystack pattern: &varname=1234abc;  delimiters &, \n, \0, SPACE, EOF 
     
     cstringarg(cbuf, "LEDBI", cval); // LEDBI: LED_BUILTIN    
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(LED_BUILTIN, atoi(cval) );       
     }  
     
@@ -158,75 +158,77 @@ void loop() {
       writeDPin(2, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN3", cval); //  
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(3, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN4", cval); //      
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(4, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN5", cval); //      
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(5, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN6", cval); //      
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(6, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN7", cval); //    
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(7, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN8", cval); //    
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(8, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN9", cval); //      
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(9, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN10", cval); //      
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(10, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN11", cval); //      
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(11, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN12", cval); //      
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(12, atoi(cval));      
     }  
-    cstringarg(cbuf, "DPIN13", cval); //      
-    if(cval!="") {          
+ 
+    cstringarg(cbuf, "DPIN13", cval); //        
+    if(strlen(cval)>0) {          
       writeDPin(13, atoi(cval));      
     }  
+
     cstringarg(cbuf, "DPIN14", cval); // caution!       
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(14, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN15", cval); // caution!       
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(15, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN16", cval); // caution!       
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(16, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN17", cval); // caution!       
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(17, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN18", cval); // caution!       
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(18, atoi(cval));      
     }        
     cstringarg(cbuf, "DPIN19", cval); // caution!       
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(19, atoi(cval));      
     } 
     cstringarg(cbuf, "DPIN20", cval); // caution!    
-    if(cval!="") {          
+    if(strlen(cval)>0) {          
       writeDPin(20, atoi(cval));      
     }   
     
