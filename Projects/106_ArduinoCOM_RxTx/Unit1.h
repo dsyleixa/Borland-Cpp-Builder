@@ -109,7 +109,6 @@ __published:	// IDE-managed Components
         void __fastcall Edit15Change(TObject *Sender);
         void __fastcall Edit16Change(TObject *Sender);
         void __fastcall Edit17Change(TObject *Sender);
-        void __fastcall Edit1Change(TObject *Sender);
         void __fastcall Button3Click(TObject *Sender);
         void __fastcall Button4Click(TObject *Sender);
         void __fastcall ScrollBar1Change(TObject *Sender);
@@ -119,6 +118,9 @@ __published:	// IDE-managed Components
         void __fastcall Button8Click(TObject *Sender);
         void __fastcall ScrollBar3Change(TObject *Sender);
         void __fastcall Button9Click(TObject *Sender);
+        void __fastcall Edit1Change(TObject *Sender);
+        void __fastcall Edit18Change(TObject *Sender);
+        void __fastcall Edit19Change(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

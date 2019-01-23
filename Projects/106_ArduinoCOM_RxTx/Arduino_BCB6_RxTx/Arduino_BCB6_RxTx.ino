@@ -10,11 +10,12 @@
 // using ButtonClass for button action (up, down, enter, single/double/long press) 
 
 // history:
+// 0.0.3  send/receive strings
 // 0.0.2  receiving strings, pattern: &varname1=value1;
 // 0.0.1  receiving simple Serial char 
 
 // simple menu example 
-// ver 0.0.2
+// ver 0.0.3
 
 
 // i2c

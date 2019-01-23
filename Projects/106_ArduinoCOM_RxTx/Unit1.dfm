@@ -586,7 +586,7 @@ object Form1: TForm1
       Height = 21
       TabOrder = 3
       Text = 'DPIN10'
-      OnChange = Edit1Change
+      OnChange = Edit18Change
     end
   end
   object GroupBox19: TGroupBox
@@ -616,9 +616,10 @@ object Form1: TForm1
       Left = 8
       Top = 16
       Width = 89
-      Height = 20
+      Height = 21
       TabOrder = 0
       Text = 'DPIN11'
+      OnChange = Edit19Change
     end
     object Button8: TButton
       Left = 120
@@ -643,6 +644,7 @@ object Form1: TForm1
       Top = 16
       Width = 193
       Height = 20
+      LargeChange = 10
       PageSize = 0
       TabOrder = 3
       OnChange = ScrollBar3Change

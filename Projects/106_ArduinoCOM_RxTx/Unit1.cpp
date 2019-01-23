@@ -307,12 +307,6 @@ void __fastcall TForm1::Edit17Change(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm1::Edit1Change(TObject *Sender)
-{
-   Label1->Caption="";
-   Button3->Click();      
-}
-//---------------------------------------------------------------------------
 
 void __fastcall TForm1::Button3Click(TObject *Sender)
 {
@@ -536,3 +530,25 @@ void __fastcall TForm1::ScrollBar3Change(TObject *Sender)
 }
 
 //---------------------------------------------------------------------------
+
+void __fastcall TForm1::Edit1Change(TObject *Sender)
+{
+   Label1->Caption="";
+   Button6->Click();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Edit18Change(TObject *Sender)
+{
+   Label18->Caption="";
+   Button6->Click();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Edit19Change(TObject *Sender)
+{
+   Label19->Caption="";
+   Button8->Click();
+}
+//---------------------------------------------------------------------------
+
