@@ -154,7 +154,7 @@ void loop() {
     */
      
     cstringarg(cbuf, "DPIN2", cval); //      
-    if(cval!="") {          
+    if(strlen(cval)>0)) {          
       writeDPin(2, atoi(cval));      
     }  
     cstringarg(cbuf, "DPIN3", cval); //  
