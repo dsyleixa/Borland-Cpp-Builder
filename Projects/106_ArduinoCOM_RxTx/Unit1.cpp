@@ -92,7 +92,7 @@ void __fastcall TForm1::ComPort1RxChar(TObject *Sender, int Count)
   
   AnsiString rcvStr;
 
-  ComPort1->ReadStr(rcvStr, 250);
+  ComPort1->ReadStr(rcvStr, 1024);
    // Liest die im Eingangspuffer vorhandenen "Count" -Bytes und kopiert sie
 
   Label2->Caption=String(rcvStr);
