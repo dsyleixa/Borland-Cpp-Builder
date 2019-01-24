@@ -137,6 +137,8 @@ void loop() {
     if(strlen(cval)>0) {          
       writeDPin(LED_BUILTIN, atoi(cval) );       
     }  
+     
+    // unrolled for debugging 
     
     /*
     cstringarg(cbuf, "DPIN0", cval); // caution!    
