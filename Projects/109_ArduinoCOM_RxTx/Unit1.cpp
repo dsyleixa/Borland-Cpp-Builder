@@ -3,6 +3,11 @@
 // Arduino COM to Borland C++ Builder form 
 // (C) 2018 by dsyleixa
 
+// This example code is in the public domain for private use.
+// Use for professional or business purpose only by personal written permission 
+// by the author.
+
+
 // history:
 // 1.0.9  4x digitalWrite I/O , rename intern Edit->Names 
 // 1.0.8  ComPort Exception
