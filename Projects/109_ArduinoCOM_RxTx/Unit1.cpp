@@ -7,7 +7,6 @@
 // Use for professional or business purpose only by personal written permission 
 // by the author.
 
-
 // history:
 // 1.0.9  4x digitalWrite I/O , rename intern Edit->Names 
 // 1.0.8  ComPort Exception
@@ -328,7 +327,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm1::Button2Click(TObject *Sender)
+void __fastcall TForm1::Button2Click(TObject *Sender) // Buttonpress: "Disconnect"
 {
    if(ComPort1->Connected ) {
       strcat(msgcstr,  "&_ALLPINS_=0;\n" );
@@ -348,7 +347,9 @@ void __fastcall TForm1::Button5Click(TObject *Sender)
       strcat(msgcstr,  "&_ALLPINS_=0;\n" );
       ComPort1->WriteStr(msgcstr);
       Sleep(100);
-      ComPort1->Close();
+      
+      try {  ComPort1->Close();  }
+      catch (...) { }
    }
 
    Application->Terminate();
@@ -987,7 +988,9 @@ void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
       strcat(msgcstr,  "&_ALLPINS_=0;\n" );
       ComPort1->WriteStr(msgcstr);
       Sleep(100);
-      ComPort1->Close();
+      
+      try {  ComPort1->Close();  }
+      catch (...) { }
    }
 
    Application->Terminate();
