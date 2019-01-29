@@ -3,6 +3,11 @@
 // Arduino COM to Borland C++ Builder form 
 // (C) 2018 by dsyleixa
 
+// This example code is in the public domain for private use.
+// Use for professional or business purpose only by personal written permission 
+// by the author.
+
+
 // history:
 // 1.0.7  pin-loop, 6x out-pins OUTn(I/O/pwm), &_ALLPINS_=0 when BCB-close
 // 1.0.6  output pins DPINn
