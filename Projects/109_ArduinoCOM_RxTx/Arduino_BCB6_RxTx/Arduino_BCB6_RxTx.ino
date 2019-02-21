@@ -10,6 +10,7 @@
 // using ButtonClass for button action (up, down, enter, single/double/long press) 
 
 // history:
+// 0.0.9  
 // 0.0.8  analog aX=analogRead(AX) (X=0...11), syntax "&AX=%d",aX
 // 0.0.7  pin-loop, 6x out-pins OUTn(I/O/pwm), &_ALLPINS_=0 when BCB-close
 // 0.0.6  output pins DPINn
@@ -18,7 +19,7 @@
 // 0.0.1  receiving simple Serial char 
 
 // BCB-Arduino: Arduino to Borland C++ Builder
-// ver 0.0.8
+// ver 0.0.9
 
 // notice:
 // on Mega2560 the anaolgWrite() pwm function works on all pins 2...13 (thus also for LED_BUILTIN) plus some evtra ones.
@@ -143,12 +144,10 @@ void loop() {
     // cstringarg( char* haystack, char* vname, char* carg )
     // haystack pattern: &varname=1234abc;  delimiters &, \n, \0, SPACE, EOF 
 
-    bool LED_BUILTIN_set = false;  
     
     cstringarg(cbuf, "LEDBI", cval); // LEDBI: LED_BUILTIN    
     if(strlen(cval)>0) {          
-      writeDPin(LED_BUILTIN, atoi(cval) ); 
-      LED_BUILTIN_set = true;      
+      writeDPin(LED_BUILTIN, atoi(cval) );     
     }  
  
     for(int o=2; o<=13; o++) {        // adjust output pins! 
