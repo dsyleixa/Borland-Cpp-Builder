@@ -18,12 +18,14 @@
 // BCB-Arduino: Arduino to Borland C++ Builder
 // ver 0.0.9
 
+
 // notice:
-// on Arduino Uno, Nano, and some more small AVR MCUs the analogWrite() pwm function 
+// on Arduino Uno, Nano, and some more small AVR MCUs analogWrite() for pwm 
 // works just on pins 3, 5, 6, 9, 10, and 11 
 // that's why analogWrite(pwm)  does //!!  NOT  !!// work here for LED_BUILTIN;
 // but
-// on Arduino Mega2560 and Arduino DUE the analogWrite() pwm function works on all pins 2...13 plus some extra ones,
+// on Arduino Mega2560 and Arduino DUE the analogWrite() pwm function 
+// works on all pins 2...13 plus some extra ones,
 // so on Mega2560 and DUE pwm works for LED_BUILTIN, too.
 
 
