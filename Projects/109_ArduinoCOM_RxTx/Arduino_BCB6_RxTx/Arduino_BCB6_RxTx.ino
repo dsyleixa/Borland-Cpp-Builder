@@ -19,15 +19,12 @@
 // ver 0.0.9
 
 // notice:
-// the analogWrite() pwm function works on all pins 2...13 plus some extra ones.
-// on ATmega168 or ATmega328P the anaolgWrite() pwm function works on pins 3, 5, 6, 9, 10, and 11 
-// thus on Arduino Uno, Nano, and some more small AVR MCUs
-// pwm does //!! not !!// work for LED_BUILTIN 
+// on Arduino Uno, Nano, and some more small AVR MCUs the analogWrite() pwm function 
+// works just on pins 3, 5, 6, 9, 10, and 11 
+// that's why analogWrite(pwm)  does //!!  NOT  !!// work here for LED_BUILTIN;
 // but
-// on Mega2560 and DUE pwm works for LED_BUILTIN, too.
-
-
-// #define _DUE_MEGA_    // <<<<<<<<<<< outcomment/uncomment acc. to board type for available GPIO pins!
+// on Arduino Mega2560 and Arduino DUE the analogWrite() pwm function works on all pins 2...13 plus some extra ones,
+// so on Mega2560 and DUE pwm works for LED_BUILTIN, too.
 
 
 
