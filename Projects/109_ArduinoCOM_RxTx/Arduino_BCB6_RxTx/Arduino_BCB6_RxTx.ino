@@ -5,9 +5,6 @@
 // Use for professional or business purpose: only 
 // by personal written permission by the author.
 
-// default TFT: OLED 128x64, compatible to Adafruit (R) Libs
-// in this example: using an ESP8266 NodeMCU 1.0 board
-// using ButtonClass for button action (up, down, enter, single/double/long press) 
 
 // history:
 // 0.0.9  
@@ -22,11 +19,12 @@
 // ver 0.0.9
 
 // notice:
-// on Mega2560 the anaolgWrite() pwm function works on all pins 2...13 (thus also for LED_BUILTIN) plus some evtra ones.
+// the analogWrite() pwm function works on all pins 2...13 plus some extra ones.
 // on ATmega168 or ATmega328P the anaolgWrite() pwm function works on pins 3, 5, 6, 9, 10, and 11 
-// thus (not for LED_BUILTIN).
-// on Mega2560 the anaolgWrite() pwm function works on all pins 2...13 
-// (thus also for LED_BUILTIN) plus some evtra ones.
+// thus on Arduino Uno, Nano, and some more small AVR MCUs
+// pwm does //!! not !!// work for LED_BUILTIN 
+// but
+// on Mega2560 and DUE pwm works for LED_BUILTIN, too.
 
 
 // #define _DUE_MEGA_    // <<<<<<<<<<< outcomment/uncomment acc. to board type for available GPIO pins!
@@ -101,7 +99,7 @@ char * cstringarg( char* haystack, char* vname, char* carg ) {
 
 void writeDPin(int pin, int ival) {
   pinMode(pin, OUTPUT);  // safety
-  if(ival==0)   { digitalWrite(pin, LOW); }
+  if( ival==0 )   { digitalWrite(pin, LOW); }
   else
   if(ival==255) { digitalWrite(pin, HIGH); }
   else {       
@@ -130,9 +128,10 @@ void loop() {
   // receive
   
   while (Serial.available() ) {
-    char inChar = (char)Serial.read();
- 
+    
+    char inChar = (char)Serial.read(); 
     inputString += inChar;
+    
     if (inChar == '\n')  {
       stringComplete = true;
     }
@@ -202,12 +201,15 @@ void loop() {
     
     inputString="";
     stringComplete = false;
-
     //delay
     delay(1);
   }
+
+
+  
   //-------------------------------------------------------------
   // send  
+  
   
   //----------------------
   // debug
@@ -223,12 +225,12 @@ void loop() {
   i6= B10101010*256;
   i6+=B10101010;
 
-  f0=0;
-  f1=10.1; 
-  f2=-20.22;
-  f3=300.333;
-  f4=-4000.4444;
-  f5=50000.55555;
+  f0=0.1;
+  f1=-10.1; 
+  f2= 20.22;
+  f3=-300.333;
+  f4= 4000.4444;
+  f5=-50000.55555;
 
   #endif
   //----------------------
