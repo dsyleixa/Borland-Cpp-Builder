@@ -5,7 +5,7 @@
   0  MB_OK                [ OK ]
   1  MB_OKCANCEL          [ OK ] [ Cancel ]
   2  MB_ABORTRETRYIGNORE  [ OK ] [ Cancel ] [ Ignore ]
-  3  MB_YESNOCANCEL       [ OK ] [ Yes ] [ No ]
+  3  MB_YESNOCANCEL       [ Yes ] [ No ] [ Cancel ]
   4  MB_YESNO             [ Yes ] [ No ]
   5  MB_RETRAYCANCEL      [ Retry] [ Cancel]  
  
