@@ -7,7 +7,7 @@
 
 
 // history:
-// 0.0.9  
+// 0.0.9  new UART test-buffer
 // 0.0.8  analog aX=analogRead(AX) (X=0...11), syntax "&AX=%d",aX
 // 0.0.7  pin-loop, 6x out-pins OUTn(I/O/pwm), &_ALLPINS_=0 when BCB-close
 // 0.0.6  output pins DPINn
