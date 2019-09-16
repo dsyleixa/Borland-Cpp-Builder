@@ -4,17 +4,17 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Project_Ellipse.exe"/>
-    <OBJFILES value="Project_Ellipse.obj ..\001_hello_world\unit1.obj"/>
+    <OBJFILES value="Project_Ellipse.obj unit1.obj"/>
     <RESFILES value="Project_Ellipse.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
-    <RESDEPEN value="$(RESFILES) ..\001_hello_world\unit1.dfm"/>
+    <RESDEPEN value="$(RESFILES) unit1.dfm"/>
     <LIBFILES value=""/>
     <LIBRARIES value=""/>
     <SPARELIBS value="rtl.lib vcl.lib"/>
     <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi bcbsmp.bpi dclocx.bpi bcb2kaxserver.bpi"/>
-    <PATHCPP value=".;..\001_hello_world"/>
+    <PATHCPP value=".;"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
     <PATHASM value=".;"/>
@@ -24,14 +24,14 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
     <MAINSOURCE value="Project_Ellipse.cpp"/>
-    <INCLUDEPATH value="..\001_hello_world;..\Project_hello;..;$(BCB)\include;$(BCB)\include\vcl"/>
-    <LIBPATH value="..\001_hello_world;..\Project_hello;..;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <INCLUDEPATH value="..\001_hello_world;..\004_Ellipse;..\Project_hello;..;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="..\001_hello_world;..\004_Ellipse;..\Project_hello;..;$(BCB)\lib\obj;$(BCB)\lib"/>
     <WARNINGS value="-w-par"/>
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-I..\001_hello_world -I..\Project_hello -I.. -I$(BCB)\include 
-      -I$(BCB)\include\vcl -src_suffix cpp -D_DEBUG -boa"/>
+    <IDLCFLAGS value="-I..\001_hello_world -I..\004_Ellipse -I..\Project_hello -I.. 
+      -I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -D_DEBUG -boa"/>
     <CFLAG1 value="-Od -H=c:\PROGRA~2\borland\CBUILD~1\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 
       -b- -k -y -v -vi- -c -tW -tWM"/>
     <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
@@ -49,7 +49,7 @@
   <FILELIST>
       <FILE FILENAME="Project_Ellipse.cpp" FORMNAME="" UNITNAME="Project_Ellipse" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Project_Ellipse.res" FORMNAME="" UNITNAME="Project_Ellipse.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="..\001_hello_world\unit1.cpp" FORMNAME="Form1" UNITNAME="unit1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="unit1.cpp" FORMNAME="Form1" UNITNAME="unit1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>
