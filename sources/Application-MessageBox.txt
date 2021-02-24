@@ -7,7 +7,7 @@
   2  MB_ABORTRETRYIGNORE  [ OK ] [ Cancel ] [ Ignore ]
   3  MB_YESNOCANCEL       [ Yes ] [ No ] [ Cancel ]
   4  MB_YESNO             [ Yes ] [ No ]
-  5  MB_RETRAYCANCEL      [ Retry] [ Cancel]  
+  5  MB_RETRYCANCEL       [ Retry] [ Cancel]  
  
  16  MBICONSTOP           (X)
  32  MBICONQUESTION       (?)
