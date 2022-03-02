@@ -1,0 +1,4 @@
+in den Feldern für analogRead muss es statt a1 bzw.  A1 richtig heißen: a0 bzw. A0
+
+also:
+a0...a5=analogRead(A0...A11)
